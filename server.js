@@ -16,6 +16,10 @@ const pool = new Pool({
   },
 });
 
+app.get('/ping', (req, res) => {
+  res.status(200).send('Server is awake');
+});
+
 app.get("/", (req, res) => {
   res.send("API is running");
 });
